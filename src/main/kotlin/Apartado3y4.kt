@@ -24,13 +24,13 @@ private fun imprimirCapasInf(edad: Int, capas: Int) {
 }
 
 private fun imprimirMensaje(mensaje: String, edad: Int) {
-    repeat(edad) {
+    repeat(15) {
         print("¨-._.-¨")
     }
     println()
     repeat((edad / 2) - (mensaje.length / 2)) { print(' ') }
     println(mensaje)
-    repeat(edad) {
+    repeat(15) {
         print("¨-._.-¨")
     }
 }
