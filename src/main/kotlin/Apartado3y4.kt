@@ -23,11 +23,12 @@ private fun imprimirCapasInf(edad: Int, capas: Int) {
     }
 }
 
-private fun imprimirMensaje(mensaje: String,edad:Int) {
+private fun imprimirMensaje(mensaje: String, edad: Int) {
     repeat(edad) {
         print("¨-._.-¨")
     }
     println()
+    repeat((edad / 2) - (mensaje.length / 2)) { print(' ') }
     println(mensaje)
     repeat(edad) {
         print("¨-._.-¨")
@@ -36,18 +37,18 @@ private fun imprimirMensaje(mensaje: String,edad:Int) {
 
 fun main() {
     println("Introduzca la edad de la persona que felicitamos.")
-    var edad = readLine()!!.toInt()
+    val edad = readLine()!!.toInt()
     println("Introduzca las capas que tendrá el pastel.")
-    var capas = readLine()!!.toInt()
+    val capas = readLine()!!.toInt()
     println("Introduzca el mensaje.")
-    var mensaje = readLine().toString()
-    imprimirMensaje(mensaje,edad)
+    val mensaje = readLine().toString()
+    imprimirMensaje(mensaje, edad)
     println()
     imprimirVelas(edad)
     println()
     imprimirCapaSup(edad)
     println()
-    imprimirCapasInf(edad,capas)
+    imprimirCapasInf(edad, capas)
     println()
-    imprimirMensaje(mensaje,edad)
+    imprimirMensaje(mensaje, edad)
 }
